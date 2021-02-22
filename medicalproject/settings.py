@@ -31,6 +31,10 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'medicalapp.apps.MedicalappConfig',
+    'crispy_forms',
+    'django_cleanup',
+    'django_resized',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
