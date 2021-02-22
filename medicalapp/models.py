@@ -3,8 +3,6 @@ from django.urls import reverse
 from PIL import Image
 from django_resized import ResizedImageField
 
-# Create your models here.
-
 
 class Disease(models.Model):
     name = models.CharField(max_length=70)

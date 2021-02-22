@@ -6,3 +6,6 @@ admin.site.register(Disease)
 admin.site.register(Field)
 admin.site.register(Doctor)
 admin.site.register(Hospital)
+
+
+
