@@ -47,6 +47,9 @@ class Doctor(models.Model):
 class Hospital(models.Model):
     name = models.CharField(max_length=100)
     area = models.CharField(max_length=70)
+    startTime = models.TimeField(null=True, blank=True)
+    endTime = models.TimeField(null=True, blank=True)
+    link = models.URLField(null=True, blank=True)
     division = models.CharField(max_length=30)
     city = models.CharField(max_length=50)
     doctors = models.ManyToManyField(Doctor)
