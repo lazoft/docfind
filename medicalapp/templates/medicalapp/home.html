@@ -1,10 +1,60 @@
-<!doctype html>
-<html >
-  <head>
-        <title>{{ title }}</title>
-    
-  </head>
-  <body >
-    <h2>Hello World!</h2>
-  </body>
-</html>
+{% extends 'medicalapp/base.html' %}
+{% block content %}
+
+<section id="home-section">
+    <div class="bgcontainer">
+    <img src="/background.svg" alt="homepage">
+    <div class="searchbar">
+        <input type="text" placeholder="Search Here">
+        <button>Search</button>
+    </div>
+    </div>
+    <div class="optcontainer">
+    <div class="selectors">
+        <a class="icon-button" href="{% url 'doctor-list' %}"><img src="/doctor_face.svg" alt=""></a>
+        <p>See Doctor's List</p>
+    </div>
+    <div class="selectors">
+        <a class="icon-button" href="#"><img src="/hospital.svg" alt=""></a>
+        <p>Look for a hospital</p>
+    </div>
+    <div class="selectors">
+        <a class="icon-button" href="#"><img src="/speciality.svg" alt=""></a>
+        <p>Find Doctor's by speciality</p>
+    </div>
+    <div class="selectors">
+        <a class="icon-button" href="#"><img src="/disease.svg" alt=""></a>
+        <p>find Doctor's by diseases</p>
+    </div>
+    </div>
+</section>
+
+<section id="about-section">
+    <div class="ab-container">
+    <div class="leftPart">
+        <div style="margin-left: 20pt">
+        <h3>Find Doctors around Instantly </h3>
+        <p>DOCTORS ARE ALWAYS WAITING TO HELP YOU. AND THROUGH OUR DOCFIND YOU CAN FIND 
+            YOUR DESIRED AND NEAREST DOCTORS EASILY. OUR DATABASE CONTAINS THOUSANDS OF DOCTORS 
+            ALL AROUND BANGLADESH.</br>
+            IF YOU ARE IN DIRE NEED OF ONE AND DON'T KNOW WHERE TO LOOK? FEAR NOT! WITH OUR ADVANCED
+            SEARCH ENGINE AND HUGE COLLECTION OF DOCTORS, YOU CAN EASILY LOOK FOR ONE RIGHT AWAY!</br>
+
+            AND YOU KNOW WHAT'S THE BEST PART? YOU CAN DIRECTLY GET THEIR INFO, CONTACT NO. AND EVEN DO
+            REMOTE APPOINTMENTS. </br>
+
+            ALL THESE SERVICES ARE TOTALLY FREE OF COSTS. ISN'T IT COOL? AND WE ARE WORKING CONTINUOSLY
+            TO ADD DATA AND UPDATE OUR DATABASE EVERY DAY.</br>
+
+            WITH EVERY SEARCH YOU MAKE, IT KEEPS GETTING BETTER.</p>
+            </div>
+    </div>
+    <div class="rightPart">
+        <h2>Learn How to Search<br> the Best Way</h2>
+        <div class="videoContainer">
+        <video src="/video.mp4" preload="auto"></video>
+        </div>
+    </div>
+    </div>
+</section>
+{% endblock content %}

@@ -1,0 +1,16 @@
+{% extends 'medicalapp/base.html' %}
+{% block content %}
+
+    <div>
+        {% for doctor in doctors %}
+            <span>{{ doctor.name }} || </span> <span>{{ doctor.fields }} || </span><span>{{ doctor.hospital }} || </span>
+            </br> 
+            <span>
+                {% for disease in doctor.treats.all %}
+                    <em>{{disease}}</em>
+                    {% endfor %}
+            </span>
+            </br>
+        {% endfor %}
+    </div>
+{% endblock content %}
