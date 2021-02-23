@@ -1,60 +1,72 @@
 {% extends 'medicalapp/base.html' %}
 {% block content %}
+<div class="navContainer">
 
-<section id="home-section">
-    <div class="bgcontainer">
-    <img src="/background.svg" alt="homepage">
-    <div class="searchbar">
-        <input type="text" placeholder="Search Here">
-        <button>Search</button>
+</div>
+</nav>
+</div>
+
+
+<div class="bglogo">
+  <!-- <p>l0<span>$h</span></p> -->
+</div>
+<div class="bgcontainer">
+  <img src="/background.svg" alt="homepage">
+  <div class="searchbar">
+    <input type="text" placeholder="Search Here">
+    <button>Search</button>
+  </div>
+  <!-- <div class="Header">
+    <div class="icon">
+      <img src="/nav_pic.png" alt="">
     </div>
+    <div class="menu" sticky>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="https://therealshihab.pythonanywhere.com/">Blog</a></li>
+          <li><a href="#">Our Team</a></li>
+          </ul>
     </div>
-    <div class="optcontainer">
-    <div class="selectors">
-        <a class="icon-button" href="{% url 'doctor-list' %}"><img src="/doctor_face.svg" alt=""></a>
-        <p>See Doctor's List</p>
-    </div>
-    <div class="selectors">
-        <a class="icon-button" href="#"><img src="/hospital.svg" alt=""></a>
-        <p>Look for a hospital</p>
-    </div>
-    <div class="selectors">
-        <a class="icon-button" href="#"><img src="/speciality.svg" alt=""></a>
-        <p>Find Doctor's by speciality</p>
-    </div>
-    <div class="selectors">
-        <a class="icon-button" href="#"><img src="/disease.svg" alt=""></a>
-        <p>find Doctor's by diseases</p>
-    </div>
-    </div>
+  </div> -->
+</div>
+<div class="optcontainer">
+  <div class="selectors">
+    <a class="icon-button" href="{% url 'doctor-list' %}"><img src="/doctor_face.svg" alt=""></a>
+    <p>See Doctor's List</p>
+  </div>
+  <div class="selectors">
+    <a class="icon-button" href="{% url 'hospital-list' %}"><img src="/hospital.svg" alt=""></a>
+    <p>Look for a hospital</p>
+  </div>
+  <div class="selectors">
+    <a class="icon-button" href="{% url 'disease-list' %}"><img src="/speciality.svg" alt=""></a>
+    <p>Find Doctor's by speciality</p>
+  </div>
+  <div class="selectors">
+    <a class="icon-button" href="#"><img src="/disease.svg" alt=""></a>
+    <p>find Doctor's by diseases</p>
+  </div>
+</div>
 </section>
 
 <section id="about-section">
-    <div class="ab-container">
-    <div class="leftPart">
-        <div style="margin-left: 20pt">
-        <h3>Find Doctors around Instantly </h3>
-        <p>DOCTORS ARE ALWAYS WAITING TO HELP YOU. AND THROUGH OUR DOCFIND YOU CAN FIND 
-            YOUR DESIRED AND NEAREST DOCTORS EASILY. OUR DATABASE CONTAINS THOUSANDS OF DOCTORS 
-            ALL AROUND BANGLADESH.</br>
-            IF YOU ARE IN DIRE NEED OF ONE AND DON'T KNOW WHERE TO LOOK? FEAR NOT! WITH OUR ADVANCED
-            SEARCH ENGINE AND HUGE COLLECTION OF DOCTORS, YOU CAN EASILY LOOK FOR ONE RIGHT AWAY!</br>
-
-            AND YOU KNOW WHAT'S THE BEST PART? YOU CAN DIRECTLY GET THEIR INFO, CONTACT NO. AND EVEN DO
-            REMOTE APPOINTMENTS. </br>
-
-            ALL THESE SERVICES ARE TOTALLY FREE OF COSTS. ISN'T IT COOL? AND WE ARE WORKING CONTINUOSLY
-            TO ADD DATA AND UPDATE OUR DATABASE EVERY DAY.</br>
-
-            WITH EVERY SEARCH YOU MAKE, IT KEEPS GETTING BETTER.</p>
-            </div>
+<div class="ab-container">
+  <div class="leftPart">
+    <h3>Find Doctors around Instantly </h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium voluptatem ipsam modi, dicta velit
+      liberibusdam necessitatibus ex <br></br>
+      facere ad commodi, odio sed iure rem iusto repellat amet modi molestiae expedita facere, mollitia possimus
+      impedit in voluptates modi obcaecati eius facilis tempore nisi, consectetur cupiditate? Molestias laborum
+      perferendis voluptates eveniet atque corporis, quidem voluptas officiis.</p>
+  </div>
+  <div class="rightPart">
+    <h2>Learn How to Search<br> the Best Way</h2>
+    <div class="videoContainer">
+      <video src="/video.mp4" preload="auto"></video>
     </div>
-    <div class="rightPart">
-        <h2>Learn How to Search<br> the Best Way</h2>
-        <div class="videoContainer">
-        <video src="/video.mp4" preload="auto"></video>
-        </div>
-    </div>
-    </div>
+  </div>
+</div>
+</div>
 </section>
 {% endblock content %}
