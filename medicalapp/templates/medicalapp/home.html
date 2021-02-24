@@ -13,10 +13,10 @@
 <div class="bgcontainer">
   <img src="/background.svg" alt="homepage">
   <div class="searchbar">
-    <form action="{% url 'search-list' %}" method="GET">
+    <form action="{% url 'search-list' %}" method="get">
     <input name="q" type="text" placeholder="Search Here">
   </form>
-    <button>Search</button>
+    <button action="{% url 'search-list' %}" type="submit">Search</button>
   </div>
   <!-- <div class="Header">
     <div class="icon">
