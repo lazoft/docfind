@@ -1,6 +1,7 @@
 from django.shortcuts import render, HttpResponse
 from django.views.generic import ListView
 from .models import Doctor, Hospital, Field, Disease
+from .filters import DoctorFilter
 
 
 def home(request):
@@ -29,3 +30,16 @@ class DieseaseListView(ListView):
     context_object_name = 'diseases'
     ordering = ['name']
     paginate_by = 10
+
+
+class SearchListView(ListView):
+    model = Doctor
+    template_name = 'medicalapp/search_list.html'
+    ordering = ['name']
+    paginate_by = 15
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['filter'] = DoctorFilter(
+            self.request.GET, queryset=self.get_queryset())
+        return context

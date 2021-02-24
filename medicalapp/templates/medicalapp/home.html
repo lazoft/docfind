@@ -13,7 +13,9 @@
 <div class="bgcontainer">
   <img src="/background.svg" alt="homepage">
   <div class="searchbar">
-    <input type="text" placeholder="Search Here">
+    <form action="{% url 'search-list' %}" method="GET">
+    <input name="q" type="text" placeholder="Search Here">
+  </form>
     <button>Search</button>
   </div>
   <!-- <div class="Header">

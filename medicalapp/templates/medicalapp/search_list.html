@@ -1,0 +1,22 @@
+{% extends 'medicalapp/base.html' %}
+{% block content %}
+    <div >
+        <div class="searchbar">
+            <input method="GET" type="text" placeholder="Search Here">
+            <button type="submit">Search</button>
+          </div>
+
+          {% for doctor in filter.qs %}
+           <ul>
+               <li>{{ doctor.name }} || {{ doctor.fields }} || {{ doctor.hospital }} ||  
+               {% for disease in doctor.treats.all %}
+                       <em>{{disease}},</em>
+               {% endfor %}
+               
+               </br></li>
+           </ul>
+        {% endfor %}
+        
+    </div>
+{% endblock content %}
+    
