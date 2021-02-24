@@ -2,7 +2,7 @@
 {% block content %}
     <div class="doctor-list">
         {% for doctor in doctors %}
-            <span>{{ doctor.name }} || </span> <span>{{ doctor.fields }} || </span><span>{{ doctor.hospital }} || </span>
+            <span>{{ doctor.name }} || </span> <span>{{ doctor.fields }} || </span><span>{{ doctor.hospital.name }} || </span>
             </br> 
             <span>
                 {% for disease in doctor.treats.all %}

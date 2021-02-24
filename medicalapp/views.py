@@ -40,7 +40,9 @@ class SearchListView(ListView):
 
     def get_queryset(self):
         query = self.request.GET.get('q')
+        # doctor_list = Doctor.objects.filter(
+        #     Q(name__icontains="x") | Q(bio__icontains="x") | Q(fields__name__icontains="neuro") | Q(hospital__name__icontains="sq"))
         doctor_list = Doctor.objects.filter(Q(name__icontains=query) | Q(bio__icontains=query) | Q(
-            fields__name__icontains=query) | Q(hospital__name__icontains=query) | Q(treats__name__icontains=query))
+            fields__name__icontains=query) | Q(hospital__name__icontains=query) | Q(treats__name__icontains=query)).distinct()
 
         return doctor_list

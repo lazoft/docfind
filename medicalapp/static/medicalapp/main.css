@@ -108,9 +108,9 @@ a {
   border-radius: 17px 17px 17px 17px;
   margin-top: 20px;
   outline: none;
-  color: white;
+  color: rgb(255, 255, 255);
   font-weight: bold;
-  background-color: rgb(64, 262, -39);
+  background-color: rgba(0, 158, 34, 0.973);
 }
 .bgcontainer .searchbar button:hover {
   padding: 3px;

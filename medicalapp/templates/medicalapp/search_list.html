@@ -6,7 +6,7 @@
         <ul>
           {% for doctor in object_list %}
             <li>
-                {{ doctor.name }} - {{ doctor.fields }} -
+                {{ doctor.name }} - {{ doctor.fields }} - {{ doctor.hospital.name }} - 
                 
             </span> - 
             {% for disease in doctor.treats.all %}
