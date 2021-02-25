@@ -7,6 +7,11 @@
 </form>
   <button class="btn btn-outline-primary" style="margin-left: 20px ; height: 40px; border-radius: 15px;" action="{% url 'search-list' %}" type="submit">Search</button>
 </div>
+
+<div class="container">
+  <div class="listContainer">
+    <div class="list-table">
+      <table class="table table-hover">
 <thead>
   <tr>
     <th scope="col"></th>
@@ -35,20 +40,21 @@
         {{disease}},
       {% endfor %}
     </td>
-      
-          {% if doctor.link %}
-              <td>
-                  <button class="btn btn-outline-success">
-                      <a href="{% url 'doctor-detail' doctor.id %}">Available</a>
-                  </button>
-              </td>
-          {% else %}
-          <td>
-              Not Available
-          </td>
-          {% endif %}
+          
+    <td>
+    {% for hospital in doctor.hospital_set.all %}                            
+    {% if hospital.link %}
+    
+    <a class="btn btn-success" href="{{ hospital.link }}" >Available</a>
+    {% else %}
+    {% endif %}
+    {% endfor %}
+    </td> 
       
     
   </tr> 
   {% endfor %} 
+</tbody>
+</table>
+
 {% endblock content %}

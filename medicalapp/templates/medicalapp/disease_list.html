@@ -1,23 +1,21 @@
 {% extends 'medicalapp/listbase.html' %}
 {% block content %}
-<div class="container">
-  <div class="listContainer">
-    <div class="list-table">
-      <h2 style="text-align: center;  margin-top: 10px;">Showing All Doctors List</h2>
-      <table class="table table-hover">
+
+<div class="container" style="width: 90%;">
+    <div class="listContainer" style="height: 100%; padding: 20px;">
+      <div class="list-table">
+        <h2 style="text-align: center; margin-top: 10px">Showing Doctor List By Disease</h2>    
+       
+    {% for disease in diseases %}
+    {% if disease.doctor_set.all %}
+    <h3> {{disease.name}} </h3>
+    <table class="table table-hover" style="border: 2px solid #ccc; overflow:hidden ; box-sizing: border-box; box-shadow: 1px 1px .5px 1px #ccc;">
         <thead>
-    <tr>
-      <th scope="col"></th>
-      <th scope="col"><label for="">Name</label></th>
-      <th scope="col"><label for="">Hospital/Chamber</label></th>
-      <th scope="col"><label for="">Speciality</label></th>
-      <th scope="col"><label for="">Disease Treatements</label></th>
-      <th scope="col"><label for="">Remote Appointment</label></th>
-    </tr>
+    
   </thead>
   <tbody>
-    {% for doctor in doctors %}
-    <tr class="tablerow">
+    {% for doctor in disease.doctor_set.all %}
+    <tr class="tablerow" style="text-align: left;">
       <th scope="row"><img class="meta-image" src="{{ doctor.image.url }}" alt="{{ doctor.name }}}"> </th>
       <td>
         <a href="{% url 'doctor-detail' doctor.id %}" 
@@ -26,17 +24,16 @@
         {% for hospital in doctor.hospital_set.all %}
             {{hospital.name}}
         {% endfor %}
-      </td>
-      <td>{{ doctor.fields}}</td>
+      </td>      
       <td>
         {% for disease in doctor.treats.all %}
           {{disease}},
         {% endfor %}
       </td>
-      <td>
+      <td >
         {% for hospital in doctor.hospital_set.all %}
           {% if hospital.link %}
-            <a class="btn btn-success" href="{{ hospital.link }}" > Available </a>
+            <a class="btn btn-success"  href="{{ hospital.link }}" > Available </a>
           {% else %}
             Not Available
           {% endif %}
@@ -45,8 +42,10 @@
       
     </tr> 
     {% endfor %} 
-  </tbody>
+    {% else %}
+    {% endif %}
+</tbody>
 </table>
-
-{% endblock content %}
     
+    {% endfor %} 
+{% endblock content %}

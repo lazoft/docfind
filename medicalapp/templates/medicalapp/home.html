@@ -15,9 +15,9 @@
   <img src="/background.svg" alt="homepage">
   <div class="searchbar">
     <form action="{% url 'search-list' %}" method="get">
-    <input name="q" type="text" placeholder="Search Here">
+    <input name="q" type="text" placeholder="Type and hit Enter">
   </form>
-    <button action="{% url 'search-list' %}" type="submit">Search</button>
+    
   </div>
   <!-- <div class="Header">
     <div class="icon">
@@ -43,11 +43,11 @@
     <p>Look for a hospital</p>
   </div>
   <div class="selectors">
-    <a class="icon-button" href="{% url 'disease-list' %}"><img src="/speciality.svg" alt=""></a>
+    <a class="icon-button" href="{% url 'field-list' %}"><img src="/speciality.svg" alt=""></a>
     <p>Find Doctor's by speciality</p>
   </div>
   <div class="selectors">
-    <a class="icon-button" href="#"><img src="/disease.svg" alt=""></a>
+    <a class="icon-button" href="{% url 'disease-list' %}"><img src="/disease.svg" alt=""></a>
     <p>find Doctor's by diseases</p>
   </div>
 </div>

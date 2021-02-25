@@ -10,9 +10,9 @@
 }
 
 .container .listContainer {
-  height: 700px;
+  height: auto;
   width: 95%;
-  position: absolute;
+  position: relative;
   top: 100px;
   border: 2px solid #ccc;
   border-radius: 10px;
@@ -23,7 +23,7 @@
   padding: 10px 15px;
   text-align: center;
   margin-top: 10px;
-  font-family: arial;
+  font-family: "Product Sans";
   border-radius: 8px;
 }
 .list-table td {

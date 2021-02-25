@@ -19,37 +19,38 @@
     integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
 
 </head>
-<body>
+<body style="font-family: 'Product Sans', sans-serif;">
     <div class="container">
         <section id="profile-header">
             <header>
                 <div class="container">
                     <div class="head">
                         <div class="img-container">
-                            <img src="{{ object.image.url }}" alt="">
+                            <img src="{{ object.image.url }}" alt="" style="box-shadow: 1px 1px 1px 1px #ccc; border: 2px solid #ccc;">
                         </div>
                         <div class="desc-container">
-                            <h2 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;" >{{object.name}}</h2>
-                            <p>{{object.fields}}; 
+                            <h2  style="font-family: 'Product Sans', sans-serif;" >{{object.name}}</h2>
+                            <p style="font-family: 'Product Sans', sans-serif;">{{object.fields}}; 
                                 {% for disease in object.treats.all %}
                                 {{disease}},
                                 {% endfor %}
                             </p>
-                            <h5>
+                            <h5 style="font-family: 'Product Sans', sans-serif;">
                                 {% for hospital in object.hospital_set.all %}
                                 {{hospital.name}}
                                 {% endfor %}
                             </h5>
-                            {% for hospital in object.hospital_set.all %}
-                            
-                        
-                            <button class="btn btn-success" href="{{ hospital.link.url }}" >Make Appointment</button>
+                            {% for hospital in object.hospital_set.all %}                            
+                            {% if hospital.link %}
+                                <a class="btn btn-success" style="margin-top: 10px;" href="{{ hospital.link }}" >Make Appointment</a>
+                            {% else %}
+                            {% endif %}
                             {% endfor %}
                         </div>
                     </div>
                     <div class="bottom">
-                        <h3>About</h3>
-                        <p>
+                        <h3 style="font-family: 'Product Sans', sans-serif;">About</h3>
+                        <p style="font-family: 'Product Sans', sans-serif;">
                             {{object.bio}}
                         </p>
                     </div>

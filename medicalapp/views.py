@@ -28,7 +28,15 @@ class HospitalListView(ListView):
     paginate_by = 10
 
 
-class DieseaseListView(ListView):
+class FieldListView(ListView):
+    model = Field
+    template_name = 'medicalapp/field_list.html'
+    context_object_name = 'fields'
+    ordering = ['name']
+    paginate_by = 10
+
+
+class DiseaseListView(ListView):
     model = Disease
     template_name = 'medicalapp/disease_list.html'
     context_object_name = 'diseases'
