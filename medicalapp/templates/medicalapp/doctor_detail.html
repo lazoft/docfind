@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,22 +26,31 @@
                 <div class="container">
                     <div class="head">
                         <div class="img-container">
-                            <img src="{{doctor.image.url}}" alt="">
+                            <img src="{{ object.image.url }}" alt="">
                         </div>
                         <div class="desc-container">
-                            <h2>{{doctor.name}}</h2>
-                            <p>{{doctor.fields}}; 
-                                {% for disease in doctor.treats.all %}
+                            <h2 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;" >{{object.name}}</h2>
+                            <p>{{object.fields}}; 
+                                {% for disease in object.treats.all %}
                                 {{disease}},
+                                {% endfor %}
                             </p>
-                            <h5>{doctor.hospital}</h4>
-                            <button class="btn btn-success">Make Appointment</button>
+                            <h5>
+                                {% for hospital in object.hospital_set.all %}
+                                {{hospital.name}}
+                                {% endfor %}
+                            </h5>
+                            {% for hospital in object.hospital_set.all %}
+                            
+                        
+                            <button class="btn btn-success" href="{{ hospital.link.url }}" >Make Appointment</button>
+                            {% endfor %}
                         </div>
                     </div>
                     <div class="bottom">
                         <h3>About</h3>
                         <p>
-                            {{doctor.bio}}
+                            {{object.bio}}
                         </p>
                     </div>
                 </div>

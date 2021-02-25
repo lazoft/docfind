@@ -1,5 +1,5 @@
 from django.shortcuts import render, HttpResponse
-from django.views.generic import ListView
+from django.views.generic import ListView, DetailView
 from .models import Doctor, Hospital, Field, Disease
 from django.db.models import Q
 
@@ -14,6 +14,10 @@ class DoctorListView(ListView):
     context_object_name = 'doctors'
     ordering = ['name']
     paginate_by = 10
+
+
+class DoctorDetailView(DetailView):
+    model = Doctor
 
 
 class HospitalListView(ListView):
@@ -43,6 +47,8 @@ class SearchListView(ListView):
         # doctor_list = Doctor.objects.filter(
         #     Q(name__icontains="x") | Q(bio__icontains="x") | Q(fields__name__icontains="neuro") | Q(hospital__name__icontains="sq"))
         doctor_list = Doctor.objects.filter(Q(name__icontains=query) | Q(bio__icontains=query) | Q(
-            fields__name__icontains=query) | Q(hospital__name__icontains=query) | Q(treats__name__icontains=query)).distinct()
+            fields__name__icontains=query) | Q(hospital__name__icontains=query) | Q(hospital__name__icontains=query) | Q(
+            hospital__area__icontains=query) | Q(hospital__division__icontains=query) | Q(hospital__city__icontains=query) | Q(
+            treats__name__icontains=query)).distinct()
 
         return doctor_list

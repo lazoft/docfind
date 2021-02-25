@@ -33,6 +33,7 @@ class Doctor(models.Model):
                               300, 300], upload_to='doctor_images')
     fields = models.ForeignKey(Field, on_delete=models.CASCADE)
     treats = models.ManyToManyField(Disease)
+    link = models.URLField(null=True, blank=True)
 
     # def __self__(self):
     #     return self.name

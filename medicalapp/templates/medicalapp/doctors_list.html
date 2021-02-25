@@ -1,16 +1,48 @@
-{% extends 'medicalapp/base.html' %}
+{% extends 'medicalapp/listbase.html' %}
 {% block content %}
-    <div class="doctor-list">
-        {% for doctor in doctors %}
-            <span>{{ doctor.name }} || </span> <span>{{ doctor.fields }} || </span><span>{{ doctor.hospital.name }} || </span>
-            </br> 
-            <span>
-                {% for disease in doctor.treats.all %}
-                    <em>{{disease}},</em>
-                    {% endfor %}
-            </span>
-            </br>
+<thead>
+    <tr>
+      <th scope="col"></th>
+      <th scope="col"><label for="">Name</label></th>
+      <th scope="col"><label for="">Hospital/Chamber</label></th>
+      <th scope="col"><label for="">Speciality</label></th>
+      <th scope="col"><label for="">Disease Treatements</label></th>
+      <th scope="col"><label for="">Remote Appointment</label></th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for doctor in doctors %}
+    <tr class="tablerow">
+      <th scope="row"><img class="meta-image" src="{{ doctor.image.url }}" alt="{{ doctor.name }}}"> </th>
+      <td>
+        <a href="{% url 'doctor-detail' doctor.id %}" 
+        style="text-decoration: none; color: black; text-transform: uppercase;">{{doctor.name}}</a></td>
+      <td>
+        {% for hospital in doctor.hospital_set.all %}
+            {{hospital.name}}
         {% endfor %}
-    </div>
+      </td>
+      <td>{{ doctor.fields}}</td>
+      <td>
+        {% for disease in doctor.treats.all %}
+          {{disease}},
+        {% endfor %}
+      </td>
+        
+            {% if doctor.link %}
+                <td>
+                    <button class="btn btn-outline-success">
+                        <a href="{% url 'doctor-detail' doctor.id %}">Available</a>
+                    </button>
+                </td>
+            {% else %}
+            <td>
+                Not Available
+            </td>
+            {% endif %}
+        
+      
+    </tr> 
+    {% endfor %} 
 {% endblock content %}
     
