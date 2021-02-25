@@ -26,7 +26,7 @@
                 <div class="container">
                     <div class="head">
                         <div class="img-container">
-                            <img src="{{ object.image.url }}" alt="" style="box-shadow: 1px 1px 1px 1px #ccc; border: 2px solid #ccc;">
+                            <img src="{{ object.image.url }}" alt="" style="box-shadow: 1pt 1pt 1pt 1pt #ccc; border: 2pt solid #ccc;">
                         </div>
                         <div class="desc-container">
                             <h2  style="font-family: 'Product Sans', sans-serif;" >{{object.name}}</h2>
@@ -42,7 +42,7 @@
                             </h5>
                             {% for hospital in object.hospital_set.all %}                            
                             {% if hospital.link %}
-                                <a class="btn btn-success" style="margin-top: 10px;" href="{{ hospital.link }}" >Make Appointment</a>
+                                <a class="btn btn-success" style="margin-top: 10pt;" href="{{ hospital.link }}" >Make Appointment</a>
                             {% else %}
                             {% endif %}
                             {% endfor %}

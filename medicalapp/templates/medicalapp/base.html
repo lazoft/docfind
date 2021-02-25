@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="{% static 'medicalapp/main.css' %}">
-  <title>OloshWeb</title>  
+  <title>DOCINFO</title>  
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js"
@@ -33,27 +33,26 @@
     <div class="footerContainer">
       <div class="first">
         <h2>FAQs</h2>
-        <p>Lorem ipsum dolor sit amet consectetur? <br>
-          adipisicing elit. Accusamus earum ?<br>necessitatibus, maiores aliquid obcaecati? <br> aspernatur esse nam
-          saepe quia? <br> nihil, beatae alias corporis fugit?</p>
+        <p>I don't know how to search ? <br>
+          aAfter clicking it's not showing any results ? <br> I'm a doctor, I'd would like to update my info <br>
+          Can I search other things here ?</p>
       </div>
       <div class="second">
-        <p>Lorem ipsum dolor sit amet consectetur <br>
-          adipisicing elit. Accusamus earum <br>necessitatibus, maiores aliquid obcaecati <br> aspernatur esse nam saepe
-          quia <br> nihil, beatae alias corporis fugit?</p>
+        <p>I'd like to find all neuro//anysurgeon,how can I do that ? <br>
+          Can I find therapists here ? <br>Can I find nurses here ? <br> aCan I get doctors' contact no here ? <br> Do you guys have affiliation with any doctor ?</p>
       </div>
       <div class="third">
-        <p>Lorem ipsum dolor sit amet consectetur <br>
-          adipisicing elit. Accusamus earum <br>necessitatibus, maiores aliquid obcaecati <br> aspernatur esse nam saepe
-          quia <br> nihil, beatae alias corporis fugit?</p>
+        <p>Are there any paid subscriptions ? <br>
+          Can I directly talk to a doctor from here ? <br>Is this website secured ? <br> Is it necessary to login/create account ? <br>I think I have seen some doctors with wrong info,
+          how can I report for corrections ?</p>
       </div>
       <div class="fourth">
-        <li><a href="#"></a>Home</li>
-        <li><a href="#"></a>Doctor's List</li>
-        <li><a href="https://therealshihab.pythonanywhere.com/"></a>Contribute</li>
-        <li><a href="https://therealshihab.pythonanywhere.com/">Blog</a></li>
-        <li><a href="#"></a>Contact Us</li>
-        <li><a href="#"></a>About US</li>
+        <li><a style="color: white;" href="{% url 'home' %}">Home</a></li>
+        <li><a style="color: white;" href="{% url 'doctor-list' %}">Doctors' List</a></li>
+        <li><a style="color: white;" href="https://therealshihab.pythonanywhere.com/feeback/">Contribute</a></li>
+        <li><a style="color: white;" href="https://therealshihab.pythonanywhere.com/">Blog</a></li>
+        <li><a style="color: white;" href="https://therealshihab.pythonanywhere.com/feeback/">Contact Us</a></li>
+        <li><a style="color: white;" href="https://therealshihab.pythonanywhere.com/about/">About Us</a></li>
       </div>
     </div>
     <div class="footerEnd">

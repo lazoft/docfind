@@ -278,6 +278,10 @@ a {
   margin-right: 50px;
 }
 
+.fourth li a {
+  color: white;
+}
+
 .data-list {
   position: absolute;
   top: 0px;
