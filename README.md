@@ -9,9 +9,12 @@ So far we haven't seen any bug yet. However, the webpage isn't responsive and ma
 
 **Future Plans:**
 We will be working on this project until further notice. Our plans / roadmap includes:
-`Additional filter for cross database searching`
-`Improved and personalized search results by adding user account and Machine Learning search detection algorithm`
-`Ability to favorite doctors and save them in user profiles`
-`Ability for doctors to add / edit their profile along with appointment links`
-`Ability for users to book appointment to hospitals that don't have options yet`
-`Adding ability for doctors to host appointments/ online medical session via video conferencing`
+
+```
+1. Additional filter for cross database searching
+2. Improved and personalized search results by adding user account and Machine Learning search detection algorithm
+3. Ability to favorite doctors and save them in user profiles
+4. Ability for doctors to add / edit their profile along with appointment links
+5. Ability for users to book appointment to hospitals that don't have options yet
+6. Adding ability for doctors to host appointments/ online medical session via video conferencing
+```
