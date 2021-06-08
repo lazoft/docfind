@@ -8,7 +8,7 @@ Has a search bar and can search doctors by `name`, `hospital`,`bio`,`speciality`
 So far we haven't seen any bug yet. However, the webpage isn't responsive and may break on mobile devices/smaller screens. We also initally intended to add some additional filters but couldn't implement yet.
 
 **Future Plans:**
-We will be working on this project until further notice. Our plans / roadmap includes:
+We will be working on this project until we feel it's ready. Our plans / roadmap includes:
 
 ```
 1. Additional filter for cross database searching
