@@ -4,4 +4,4 @@ image
 django-cleanup
 django-crispy-forms
 django-resized
-django-filters
+django-filter
