@@ -61,7 +61,7 @@ The packages are written in the `requirements.txt` file. To install them all at 
 ```
 pip install -r requirements.txt
 ```
-Run the command again if you face any errors. This should set you up to run the project on localhost.
+Run the command again if you to ensure all packages installed properly. This should set you up to run the project on localhost.
 
 ### Running on localhost/browser
 To check any errors, you must run `manage.py`.
