@@ -5,7 +5,7 @@ Docfind is a webapp where you can details of doctors around Bangladesh. The goal
 Has a search bar and can search doctors by `name`, `hospital`,`bio`,`speciality`,`disease treatments`,`hospital location`,`appointment`.
 
 **Bugs:**
-So far we haven't seen any bug yet. However, the webpage isn't responsive and may break on mobile devices/smaller screens. We also initally intended to add some additional filters but couldn't implement yet.
+This project is in its very early state and contains numerous issues that we are working on to fix. For starters, the webpage isn't responsive and may break on mobile devices/smaller screens. The search filters don't work properly as well as it is not supplied with any default fonts which can cause weird glitchings.
 
 **Future Plans:**
 We will be working on this project until we feel it's ready. Our plans / roadmap includes:
@@ -57,21 +57,23 @@ source myvirtualenv/bin/activate
 *If you are using Windows CLI/Powershell then don't type the `source` command*
 
 **Installing packages:**
+Since now you are in a virtual environment it is not necessary to use pip3 or python3(which doesn't have any other python installation). Instead pip and python can be used without issue. 
+
 The packages are written in the `requirements.txt` file. To install them all at once type the following command:
 ```
 pip install -r requirements.txt
 ```
-Run the command again if you to ensure all packages installed properly. This should set you up to run the project on localhost.
+Run the command again to ensure all packages installed properly. This should set you up to run the project on localhost.
 
 ### Running on localhost/browser
 To check any errors, you must run `manage.py`.
 ```
 python manage.py check
 ```
-It may or may not give some warnings. If doesn't show any errors/tracebacks run the project using:
+It may or may not give some warnings. Warnings won't stop the project from running. Unless it doesn't show any errors/tracebacks, run the project using:
 ```
 python manage.py runserver
 ```
-now go to `localhost` or `127.0.0.1:8000/` to check whether it ran properly or not.
+Now go to `localhost` or `127.0.0.1:8000/` to check whether it ran properly or not.
 
 **That's it. You are ready to go for development.**
