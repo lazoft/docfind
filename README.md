@@ -79,3 +79,5 @@ python manage.py runserver
 Now go to `localhost` or `127.0.0.1:8000/` to check whether it ran properly or not.
 
 **That's it. You are ready to go for development.**
+
+If you still face any issues, try searching StackOverflow or other forums. It is likely that they will have the solution. Still if you can't solve, mail me  [**here**](mailto:dr6j0wkjg@relay.firefox.com).
