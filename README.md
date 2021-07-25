@@ -25,7 +25,7 @@ The project doesn't include any complex or sophisticated framework. It is built 
 
 ### Pre-requisites
 
-This project requires at least `python 3.6` or above. `pip` should also installed which will be used to install required python packages. To check python version type following in terminal:
+This project requires at least `python 3.6` or above. `pip` should also required to install required python packages. To check python version type following in terminal:
 ```
 python3 --version
 ```
