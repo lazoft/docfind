@@ -21,7 +21,7 @@ We will be working on this project until we feel it's ready. Our plans / roadmap
 ## Development
 The project doesn't include any complex or sophisticated framework. It is built with the fundamental features of the Django framework and basic HTML, CSS. Following are steps to download the project on your machine and start developing.
 
-***N.B.: It is recommended to fork the project and `git clone` it to your machine for additional development. It will later help us if you wish to merge you developments with pull requests.***
+***N.B.: It is recommended to fork the project and `git clone` it to your machine for additional development. It will later help us if you wish to merge your developments with pull requests.***
 
 ### Pre-requisites
 
