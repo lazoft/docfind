@@ -1,5 +1,5 @@
 # Docfind
-Docfind is a webapp where you can details of doctors around Bangladesh. The goal is to keep a centralized database and ease of navigation for finding doctors easily. It also incorporates some advanced filters for searching doctors.
+Docfind is a webapp where you can find details of doctors around Bangladesh. The goal is to keep a centralized database and ease of navigation for finding doctors easily. It also incorporates some advanced filters for searching doctors.
 
 **Current Features:**
 Has a search bar and can search doctors by `name`, `hospital`,`bio`,`speciality`,`disease treatments`,`hospital location`,`appointment`.
