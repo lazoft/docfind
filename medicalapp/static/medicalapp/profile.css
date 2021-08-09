@@ -17,7 +17,7 @@
 }
 .img-container{
     width:30%;
-    background-color: #fff;    
+    background-color: #fff;
 }
 .img-container img{
     height:200px;
@@ -29,21 +29,21 @@
 }
 .desc-container{
     width: 60%;
-    
+
 }
 .desc-container h2{
-    font-family: 'Courier New', Courier, monospace;
+    font-family: "DM Sans",'Courier New', Courier, monospace;
     text-transform: uppercase;
     color: rgb(61, 60, 60);
     margin-top:35px;
 }
 .desc-container p{
-    font-family: serif;
+    font-family: "DM Sans", sans-serif;
     margin-top: 30px;
-    
+
 }
 .desc-container h5{
-    font-family: serif;
+    font-family: "DM Sans", sans-serif;
 }
 .desc-container button{
     margin-top:20px;

@@ -20,7 +20,7 @@
     <tr class="tablerow">
       <th scope="row"><img class="meta-image" src="{{ doctor.image.url }}" alt="{{ doctor.name }}}"> </th>
       <td>
-        <a href="{% url 'doctor-detail' doctor.id %}" 
+        <a href="{% url 'doctor-detail' doctor.id %}"
         style="text-decoration: none; color: black; text-transform: uppercase;">{{doctor.name}}</a></td>
       <td>
         {% for hospital in doctor.hospital_set.all %}
@@ -41,12 +41,11 @@
             Not Available
           {% endif %}
         {% endfor %}
-      </td> 
-      
-    </tr> 
-    {% endfor %} 
+      </td>
+
+    </tr>
+    {% endfor %}
   </tbody>
 </table>
 
 {% endblock content %}
-    

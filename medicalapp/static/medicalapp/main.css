@@ -4,7 +4,7 @@
 }
 body {
   font-size: 100%;
-  font-family: sans-serif;
+  font-family: "DM Sans", sans-serif;
 }
 
 div,
@@ -70,7 +70,7 @@ a {
 .bglogo p {
   color: #ffd500;
   font-size: 45px;
-  font-family: "Courier New", Courier, monospace;
+  font-family: "DM Sans","Courier New", Courier, monospace;
   font-weight: bold;
   text-transform: uppercase;
 }
@@ -214,7 +214,7 @@ a {
 }
 .footerEnd p {
   color: whitesmoke;
-  font-family: sans-serif;
+  font-family: "DM Sans", sans-serif;
 }
 .footerEnd p a {
   color: rgb(0, 186, 154);
@@ -233,7 +233,7 @@ a {
   padding: 25px;
 }
 .footerContainer .first h2 {
-  font-family: serif;
+  font-family: "DM Sans", sans-serif;
   font-weight: bold;
   color: white;
 }
