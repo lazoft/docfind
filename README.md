@@ -49,7 +49,7 @@ After installing `pip` and `python` the required packages must be downloaded. It
 
 **Setting up virtual environment:**
 ```
-pip3 install venv
+pip3 install virtualenv
 python3 -m venv myvirtualenv
 ```
 This will create the virtual environment. Now activate the virtual environment using the following command(On MacOS/Linux):
