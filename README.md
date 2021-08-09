@@ -36,7 +36,7 @@ If you are on Ubuntu/Ubuntu based distros with `apt` package manager you install
 ### On Linux Distros with `apt` package manager
 ```
 sudo apt-get update
-sudo apt-get install sudo apt install build-essential libssl-dev libffi-dev python3-dev python3-pip
+sudo apt-get install build-essential libssl-dev libffi-dev python3-dev python3-pip
 ```
 
 Most linux distribution come with some package manager using which `python` along with `pip` can be installed. Synaptic package manager also contains python distribution.
@@ -59,7 +59,7 @@ source myvirtualenv/bin/activate
 *If you are using Windows CLI/Powershell then don't type the `source` command*
 
 **Installing packages:**
-Since now you are in a virtual environment it is not necessary to use `pip3` or `python3` (because it doesn't have any other python installation). Instead `pip` and `python` can be used without issue. 
+Since now you are in a virtual environment it is not necessary to use `pip3` or `python3` (because it doesn't have any other python installation). Instead `pip` and `python` can be used without issue.
 
 The packages are written in the `requirements.txt` file. To install them all at once type the following command:
 ```
